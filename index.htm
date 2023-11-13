@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8">
+        <title>Картина</title>
+    <style>
+        img {
+        position: relative;
+        z-index: -1;
+        width: 800px;
+        }
+
+        div{
+        display: inline-block;
+        border: 1px red solid;
+      
+        position: relative;
+        top: 150px;
+        left: 100px;
+        background: url(img/a-frame-2.png) top -44px left repeat-x,
+        url(img/a-frame-4.png) right -36px center repeat-y,
+        url(img/a-frame-6.png) bottom -36px left repeat-x,
+         url(img/a-frame-8.png) top left -36px repeat-y;}
+        div:before {
+            content: "";
+            position: absolute;
+            background: 
+                url(img/a-frame-1.png) left top no-repeat,
+                url(img/a-frame-7.png) left bottom no-repeat;
+                left: -36px;
+                top: -44px;
+                bottom: -36px;
+                width: 237px;
+        }
+        div:after {
+            content: "";
+            position: absolute;
+            background: 
+                url(img/a-frame-3.png) right top no-repeat,
+                url(img/a-frame-5.png) right bottom no-repeat;
+            top: -44px;
+            bottom: -36px;
+            right: -37px;
+            width: 228px;
+        }
+
+   </style>
+   </head>
+    <body>
+        <div>
+        <img src="img/pic.jpg">
+        </div>
+    </body>
+</html>
